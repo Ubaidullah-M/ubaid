@@ -221,6 +221,15 @@ main .handles {
     
 }
 
+#read-more {
+    display: block;
+    padding: .5em 0 2em 0;
+}
+
+.hide-me {
+    display: none;
+}
+
 .centering {
     position: absolute;
     top: 2em;
@@ -464,14 +473,21 @@ main .handles {
 }
 
 #portfolio .expertise {
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 #portfolio .card {
     padding: 0;
     overflow: hidden;
-    box-shadow: 0 0 5px var(--b-txt-color),
-                0 0 15px var(--b-txt-color);
+    border: 1px solid var(--gr1);
+    box-shadow: 0 0 5px var(--box-shadow),
+                0 0 15px var(--box-shadow),
+                0 0 25px var(--box-shadow),
+                0 0 35px var(--box-shadow);
+}
+
+#portfolio .card:hover {
+    opacity: .65;
 }
 
 #portfolio img {
@@ -479,6 +495,33 @@ main .handles {
     display: block;
 }
 
+
+/* =====Contact me styling ===== */
+
+#contact {
+    width: 100%;
+    background: var(--gr1);
+    display: flex;
+    flex-direction: column;
+    /* padding: 1em 120px; */
+}
+
+.keep-in-touch {
+    display: none;
+}
+
+.sub-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1em 120px;
+}
+
+.copy-right {
+    background: var(--box-shadow);
+    padding: 1em 120px;
+    text-align: center;
+}
 
 /* =====media Query for tab===== */
 @media screen and (max-width: 920px) {
@@ -553,8 +596,10 @@ main .handles {
     #about .intro p {
         font-size: 16px;
     }
-}
 
+    
+}
+    
 @media screen and (max-width: 500px) {
     header, #home, #about {
         padding: 1em;
@@ -571,13 +616,14 @@ main .handles {
         font-size: 22px;   
     }
 
-    #home .intro {
+    #home .intro, .sub-header {
         padding: 1.5em;
     }
 
     #about .intro {
-        margin-bottom: 5em;
-        padding: 2em;
+        margin: 5em 0;
+        margin-bottom: 0em;
+        padding: 2em 1em;
     }
 
     #about .my-pic {
@@ -589,5 +635,16 @@ main .handles {
     .my-pic .blob {
         width: 370px;
         bottom: 10%;
+    }
+
+
+    /* portfolio styling */
+    #portfolio .expertise {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* contact me */
+    .sub-header {
+        flex-direction: column;
     }
 }

@@ -24,3 +24,20 @@ for (i=0;i<navLinks.length;i++) {
 function closesMenu() {
     nav.classList.remove('nav')
 }
+
+// About me section
+
+let readMore = document.querySelector('#read-more');
+let about = document.querySelector('#about')
+
+readMore.addEventListener('click', function(e) {
+    e.preventDefault()
+    let docMore = document.querySelector('.see-more');
+    if (readMore.innerText === "Read more") {
+        readMore.innerText = "Read less";
+        docMore.classList.remove('hide-me');
+    } else {
+        readMore.innerText = "Read more";
+        docMore.classList.add('hide-me');
+    }
+})
