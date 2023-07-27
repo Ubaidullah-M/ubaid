@@ -415,17 +415,17 @@ main .handles {
 
 .bootstrap {
     background: var(--b-txt-color) !important;
-    width: 50% !important;
+    width: 40% !important;
 }
 
 .nodejs {
     background: var(--b-txt-color) !important;
-    width: 50% !important;
+    width: 40% !important;
 }
 
 .express {
     background: var(--b-txt-color) !important;
-    width: 50% !important;
+    width: 40% !important;
 }
 
 .sass {
@@ -435,7 +435,7 @@ main .handles {
 
 .wordpress {
     background: var(--b-txt-color) !important;
-    width: 60% !important;
+    width: 40% !important;
 }
 
 .figma {
@@ -517,6 +517,18 @@ main .handles {
     padding: 1em 120px;
 }
 
+.location > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.location > div i {
+    margin-right: 1em;
+    color: var(--b-txt-color);
+    font-size: 1.5rem;
+}
+
 .copy-right {
     background: var(--box-shadow);
     padding: 1em 120px;
@@ -527,7 +539,7 @@ main .handles {
 @media screen and (max-width: 920px) {
     
     /* =====header styling==== */
-    header {
+    header, .sub-header {
         padding: 1em 50px;
     }
 
@@ -646,5 +658,8 @@ main .handles {
     /* contact me */
     .sub-header {
         flex-direction: column;
+    }
+    .sub-header a {
+        margin-bottom: 2em;
     }
 }
