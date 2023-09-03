@@ -327,7 +327,7 @@ main .handles {
 .card li {
     list-style: none;
     position: relative;
-    padding-left: 1em;
+    padding-left: 1.2em;
     
 }
 
@@ -339,7 +339,8 @@ main .handles {
     background: var(--gr1);
     position: absolute;
     left: 0;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 50%;
 }
 
@@ -683,5 +684,19 @@ main .handles {
     }
     .sub-header a {
         margin-bottom: 2em;
+    }
+
+    /* nav hover effect */
+    nav ul li::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: var(--base-color);
+        position: absolute;
+        bottom: -10px;
+    }
+    
+    nav ul li:hover::after {
+        width: 100%;
     }
 }
