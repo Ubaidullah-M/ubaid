@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ubaid</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-purple-100 text-sm md:text-base text-gray-700">
+    <!-- header section -->
+
+    <header class="sticky top-0 w-full z-40 p-4 py-2 lg:px-28 flex items-center justify-between bg-white border-b border-gray-300">
+      <a href="#home">
+        <img class="w-22" src="images/LOGO.svg" alt="Ubaid logo" />
+      </a>
+      <button class="md:hidden">
+        <i class="fa-solid fa-bars" id="menu"></i>
+      </button>
+      <ul id="nav-links" class="hidden md:flex gap-4 items-center">
+        <li class="text-md text-purple-900 font-semibold"><a href="#home">Home</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#about">About</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#services">Services</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#skills">Skills</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#portfolio">Projects</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <!-- mobile nav links -->
+    <nav id="nav" class="hidden absolute z-50 md:hidden top-0 left-0 right-0 bottom-0 md:bg-transparent bg-purple-200 h-full md:flex flex-col">
+      <button class="md:hidden m-6 ml-auto">
+        <i class="fa-solid fa-close" id="close-menu"></i>
+      </button>
+      <ul id="nav-links" class="flex gap-4 flex-col md:flex-row items-center">
+        <li class="text-md text-purple-900 font-semibold"><a href="#home">Home</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#about">About</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#services">Services</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#skills">Skills</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#portfolio">Projects</a></li>
+        <li class="text-md text-purple-900 font-semibold"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- main section -->
+
+    <main id="home" class="bg-white flex flex-col md:flex-row md:items-center justify-between p-8 lg:p-20 m-4 lg:mx-28 lg:my-4 border border-gray-300 rounded-xl">
+      <div class="intro">
+        <p class="font-semibold">Hi<span>!</span> I 'am</p>
+        <h1 class="font-bold text-xl md:text-4xl text-purple-900">Ubaidullah Muhammad Ahmad</h1>
+        <p>
+          a <span>UI/UX designer</span> and a
+          <span>Front-end web developer.</span>
+        </p>
+        <div class="handles">
+          <a href="https://twitter.com/ubaid_ma"
+            ><i class="fa-brands fa-twitter" id="twitter"></i
+          ></a>
+          <a href="https://linkedin.com/in/ubaidullah-va"
+            ><i class="fa-brands fa-linkedin" id="linkedin"></i
+          ></a>
+          <a href="https://github.com/Ubaidullah-M"
+            ><i class="fa-brands fa-github" id="github"></i
+          ></a>
+          <!-- <a href=""><i class="fa-brands fa-instagram" id="instagram"></i></a>
+                <a href=""><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-telegram" id="telegram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook" id="facebook"></i></a> -->
+          <!-- <a href=""><i class="fa-solid fa-envelope" id="email"></i></a> -->
+        </div>
+        <a href="#contact" id="hire-me">Hire me</a>
+      </div>
+      <div class="my-pic hidden md:flex">
+        <img class="w-42" src="images/myself1.png" alt="my Picture" />
+      </div>
+    </main>
+
+    <!-- About section -->
+
+    <section id="about" class="m-4 lg:mx-28 lg:my-4">
+      <h2 class="about centering font-semibold text-purple-900">About me</h2>
+      <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20">
+        <div class="my-pic">
+          <img class="w-42 hidden" src="images/myself1.png" alt="my Picture" />
+        </div>
+        <div class="intro">
+          <p>
+            As a dedicated Mechanical Engineer, I earned my degree from the
+            esteemed University of Maiduguri in November 2015. My professional
+            journey commenced at Jaiz Bank plc, where I served as a Transaction
+            Officer in the Operations department. During my time there, I
+            encountered numerous advertisements highlighting the significance of
+            coding and programming, which immediately captivated my interest and
+            ignited a desire for learning.
+          </p>
+          <div class="see-more hide-me">
+            <p class="mt-4">
+              Motivated to expand my skill set and pursue new avenues of growth, I
+              embarked on a relentless pursuit of knowledge through various online
+              resources and self-directed learning. With a resolute determination,
+              I independently acquired proficiency in coding and programming, a
+              journey that has significantly enriched my capabilities and
+              aspirations.
+            </p>
+            <p class="mt-4">
+              This continuous journey of self-improvement and passion for learning
+              has enabled me to harness the synergy between my Mechanical
+              Engineering background and coding skills. As I transitioned to the
+              role of Mechanical Engineer II with Rural Water Supply and
+              Sanitation Agency (RUWASAA) Borno, I have consistently sought
+              opportunities to apply my expertise in both domains, fostering a
+              holistic approach to problem-solving and innovation.
+            </p>
+            <p class="mt-4">
+              In summary, my journey as a self-learner has been an inspiring and
+              fulfilling experience, empowering me to confidently explore new
+              realms of possibilities and contribute meaningfully to the fields of
+              Mechanical Engineering and technology.
+            </p>
+          </div>
+          <a href="#" id="read-more">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service section -->
+
+    <section id="services" class="m-4 lg:mx-28 lg:my-4">
+      <h2 class="services centering font-semibold text-purple-900">Services</h2>
+      <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20">
+        <p>These are the services I render</p>
+        <div class="expertise grid gap-2 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+          <div class="bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <i class="fa-solid fa-code"></i>
+            <h3>Front-end developement</h3>
+            <p>I make use of the following:</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>javaScript</li>
+            </ul>
+          </div>
+          <div class="bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <i class="fa-brands fa-sketch"></i>
+            <h3>UI/UX Design</h3>
+            <p>the tool I use is:</p>
+            <ul>
+              <li>Figma</li>
+            </ul>
+          </div>
+          <div class="bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <i class="fa-brands fa-wordpress-simple"></i>
+            <h3>Wordpress developement</h3>
+            <p>This is a CMS therefore I use</p>
+            <ul>
+              <li>wordpress</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my skill section -->
+
+    <section class="m-4 lg:mx-28 lg:my-4" id="skills">
+      <h2 class="services centering font-semibold text-purple-900">My skills</h2>
+      <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20">
+        <p>Below are some of the areas I have expertise on</p>
+        <div class="expertise grid gap-2 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="icon-details">
+              <h3>HTML/HTML5</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[90%] h-1"></div>
+              </div>
+              <span>90%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-css3"></i></div>
+            <div class="icon-details">
+              <h3>CSS/CSS3</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[80%] h-1"></div>
+              </div>
+              <span>80%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-sass"></i></div>
+            <div class="icon-details">
+              <h3>Sass</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[50%] h-1"></div>
+              </div>
+              <span>50%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-bootstrap"></i></div>
+            <div class="icon-details">
+              <h3>Bootstrap</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[40%] h-1"></div>
+              </div>
+              <span>40%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-square-js"></i></div>
+            <div class="icon-details">
+              <h3>javaScript</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[70%] h-1"></div>
+              </div>
+              <span>70%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-node"></i></div>
+            <div class="icon-details">
+              <h3>node.js</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[40%] h-1"></div>
+              </div>
+              <span>40%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-node-js"></i></div>
+            <div class="icon-details">
+              <h3>ExpressJS</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[40%] h-1"></div>
+              </div>
+              <span>40%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-figma"></i></div>
+            <div class="icon-details">
+              <h3>Figma</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[80%] h-1"></div>
+              </div>
+              <span>80%</span>
+            </div>
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg p-4 md:p-8">
+            <div class="icon"><i class="fa-brands fa-react"></i></div>
+            <div class="icon-details">
+              <h3>ReactJS</h3>
+              <div class="percent bg-purple-300 rounded-full overflow-hidden">
+                <div class="bg-purple-900 w-[40%] h-1"></div>
+              </div>
+              <span>40%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio section -->
+
+    <section class="m-4 lg:mx-28 lg:my-4" id="portfolio">
+      <h2 class="services centering font-semibold text-purple-900">Portfolio</h2>
+      <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20 flex flex-col gap-4">
+        <div class="flex gap-2">
+          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white">All</button>
+          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white">front-end</button>
+          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white">UI-Figma</button>
+        </div>
+        <div class="expertise grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] mt-2">
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/dashboard.png" alt="portfolio" />
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/4get.png" alt="portfolio" />
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/install.png" alt="portfolio" />
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/pizza.png" alt="portfolio" />
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/sass.png" alt="portfolio" />
+          </div>
+          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+            <img class="w-full md:w-80" src="portfolio/rgb-bg.png" alt="portfolio" />
+          </div>
+      </div>
+      </div>
+    </section>
+    <footer id="contact" class="bg-purple-800 text-white">
+      <div class="lg:mx-20 p-8">
+        <div class="contacts">
+          <!-- <div class="keep-in-touch">
+                  <h2 class="hire-me">Reach out to me</h2>
+                  <form action="#">
+  
+                  </form>
+              </div> -->
+          <div class="sub-header">
+            <a href="#home">
+              <img src="images/LOGO.svg" alt="Ubaid logo" />
+            </a>
+            <div class="location">
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p>
+                  Lawan Monguno street,<br />
+                  Hausari ward Maiduguri, Nigeria
+                </p>
+              </div>
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <p>+2348027867072</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>ubaidullahahhmad@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center bg-purple-900 p-2 text-xs md:text-sm">
+        <p>Copy right &copy 2025 Ubaid | All rights reserved!</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

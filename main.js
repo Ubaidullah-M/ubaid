@@ -1,28 +1,31 @@
 let menu = document.querySelector('#menu');
-let closeMenu = document.querySelector('#close-menu');
-let nav = document.querySelector('header nav');
+let close = document.querySelector('#close-menu');
+let nav = document.querySelector('#nav');
 let lists = document.querySelector('header ul');
 let navLinks = document.querySelector('#nav-links').querySelectorAll('li');
+let copyRight = document.querySelector("#copy-right")
 
 // Toggling humberger menu on and off
 
+copyRight.innerText = new Date().getFullYear()
+
 menu.addEventListener('click', () => {
-    nav.classList.add('nav')
+    nav.classList.toggle("hidden")
 })
 
-closeMenu.addEventListener('click', () => {
-    nav.classList.remove('nav')
+close.addEventListener('click', () => {
+    nav.classList.toggle("hidden")
 
 })
 
 // Removing nav when clicking menu on small screen.
 
-for (i=0;i<navLinks.length;i++) {
-    navLinks[i].addEventListener('click', closesMenu)
-}
+navLinks.forEach((nav) => {
+    nav.addEventListener("click", closesMenu)
+})
 
 function closesMenu() {
-    nav.classList.remove('nav')
+    nav.classList.toggle("hidden")
 }
 
 // About me section
