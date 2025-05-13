@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ubaid</title>
     <!-- <link rel="stylesheet" href="style.css" /> -->
+     <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,6 +13,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-purple-100 text-sm md:text-base text-gray-700">
+
+    <div class="my-loading hidden fixed top-0 left-0 w-full h-full flex items-center justify-center">
+      <div class="load-cycle w-12 md:w-14 h-12 md:h-14 rounded-full border-6 border-t-gray-100"></div>
+      <div class="message-note hidden bg-white border border-gray-300 flex flex-col gap-4 items-center mx-6 p-8 md:p-20 rounded-lg">
+        <p id="note" class="text-sm md:text-base text-center"></p>
+        <button id="close-message" class="py-1 px-4 md:py-2 rounded-lg bg-purple-900 text-white w-max hover:bg-purple-700">close</button>
+      </div>
+    </div>
 
     <!-- header section -->
 
@@ -53,9 +62,9 @@
       <div class="flex flex-col gap-2">
         <p class="font-semibold">Hi<span>!</span> I 'am</p>
         <h1 class="font-bold text-xl md:text-4xl text-purple-900">Ubaidullah Muhammad Ahmad</h1>
-        <p>
-          a <span>UI designer</span> and a
-          <span>Front-end web developer.</span>
+        <p class="italic">
+          a <span class="font-bold text-cyan-600 italic">UI</span> designer and a
+          <span class="font-bold text-cyan-600 italic">Front-end</span> developer.
         </p>
         <a href="#contact" id="hire-me" class="bg-purple-900 text-white py-1 px-4 md:py-2 rounded-lg w-max outline-purple-600 hover:bg-purple-700">Hire me</a>
       </div>
@@ -108,7 +117,7 @@
               Mechanical Engineering and technology.
             </p>
           </div>
-          <a href="#" id="read-more">Read more</a>
+          <a href="#" id="read-more" class="text-purple-600 underline underline-offset-2 pt-2">Read more</a>
         </div>
       </div>
     </section>
@@ -118,10 +127,10 @@
     <section class="m-4 my-6 lg:mx-28" id="portfolio">
       <h2 class="font-semibold text-purple-900 border-l-4 pl-2 mb-1">Portfolio</h2>
       <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20 flex flex-col gap-4">
-        <div class="flex gap-2 border-b border-purple-400 pb-4">
-          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">All</button>
-          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">front-end</button>
-          <button class="py-1 px-3 bg-purple-200 border border-gray-300 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">UI-Figma</button>
+        <div id="portfolio-btn" class="flex gap-2 border-b border-purple-400 pb-4">
+          <button data-filter="all" class="active py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">All</button>
+          <button data-filter="front-end" class="py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">front-end</button>
+          <button data-filter="figma" class="py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">UI-Figma</button>
         </div>
         <div class="expertise grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] mt-2">
           <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
@@ -150,20 +159,20 @@
     <section class="m-4 my-6 lg:mx-28" id="contact">
       <h2 class="font-semibold text-purple-900 border-l-4 pl-2 mb-1">Contact us</h2>
       <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20">
-        <form action="" class="flex flex-col gap-4">
+        <form action="/contact" method="POST" id="my-form" class="flex flex-col gap-4">
           <div class="flex flex-col md:grid gap-4 grid-cols-2 justify-between md">
             <div class="flex flex-col">
               <label for="name">Name:</label>
-              <input type="text" id="name" class="border border-gray-300 py-1 px-2 rounded-md w-full outline-purple-600" placeholder="Enter your name">
+              <input type="text" id="name" required class="border border-gray-300 py-1 px-2 rounded-md w-full outline-purple-600 valid:border-green-500" placeholder="Enter your name">
             </div>
             <div class="flex flex-col">
               <label for="email">Email:</label>
-              <input type="text" id="email" class="border border-gray-300 py-1 px-2 rounded-md w-full outline-purple-600" placeholder="Enter your email address">
+              <input type="email" id="email" required class="border border-gray-300 py-1 px-2 rounded-md w-full outline-purple-600 valid:border-green-500" placeholder="Enter your email address">
             </div>
           </div>
           <div class="flex flex-col">
             <label for="message">Message:</label>
-            <textarea id="message" class="border border-gray-300 py-1 px-2 rounded-md h-40 outline-purple-600" placeholder="write your message here..."></textarea>
+            <textarea id="message" required class="border border-gray-300 py-1 px-2 rounded-md h-40 outline-purple-600 valid:border-green-500" placeholder="write your message here..."></textarea>
           </div>
           
           <button class="bg-purple-900 text-white py-1 px-4 md:py-2 rounded-lg w-max ml-auto outline-purple-600 hover:bg-purple-700">Submit</button>
@@ -198,23 +207,20 @@
           </div>
         </div>
         <div class="flex gap-2">
-          <a href="https://twitter.com/ubaid_ma"
-            ><i class="fa-brands fa-twitter" id="twitter"></i
+          <a href="https://twitter.com/ubaid_ma" target="_blank"><i class="fa-brands fa-twitter" id="twitter"></i
           ></a>
-          <a href="https://linkedin.com/in/ubaidullah-va"
-            ><i class="fa-brands fa-linkedin" id="linkedin"></i
+          <a href="https://linkedin.com/in/ubaidullah-va" target="_blank"><i class="fa-brands fa-linkedin" id="linkedin"></i
           ></a>
-          <a href="https://github.com/Ubaidullah-M"
-            ><i class="fa-brands fa-github" id="github"></i
+          <a href="https://github.com/Ubaidullah-M" target="_blank"><i class="fa-brands fa-github" id="github"></i
           ></a>
-          <a href=""><i class="fa-brands fa-instagram" id="instagram"></i></a>
-          <a href=""><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
-          <a href=""><i class="fa-brands fa-telegram" id="telegram"></i></a>
-          <a href=""><i class="fa-brands fa-facebook" id="facebook"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram" id="instagram"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-whatsapp" id="whatsapp"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-telegram" id="telegram"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-facebook" id="facebook"></i></a>
         </div>
       </div>
       <div class="flex items-center justify-center bg-purple-800 p-2 text-xs md:text-sm">
-        <p>Copy right &copy <span id="copy-right"></span> Ubaid | All rights reserved!</p>
+        <p>&copy <span id="copy-right"></span> Ubaid | All rights reserved!</p>
       </div>
     </footer>
 
