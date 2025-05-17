@@ -125,36 +125,29 @@
 
     <!-- Portfolio section -->
 
-    <section class="m-4 my-6 lg:mx-28" id="portfolio">
-      <h2 class="font-semibold text-purple-900 border-l-4 pl-2 mb-1">Portfolio</h2>
+    <section class="m-4 my-6 lg:mx-28">
+      <h2 class="font-semibold text-purple-900 border-l-4 pl-2 mb-1">Projects</h2>
       <div class="bg-white border border-gray-300 rounded-xl p-8 lg:p-20 flex flex-col gap-4">
-        <div id="portfolio-btn" class="flex gap-2 border-b border-purple-400 pb-4">
+        <div id="portfolio-btn" class="flex gap-2 pb-4">
           <button data-filter="all" class="active py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">All</button>
           <button data-filter="front-end" class="py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">front-end</button>
           <button data-filter="figma" class="py-1 px-3 border border-purple-900 rounded-full text-xs md:text-sm text-purple-900 font-semibold hover:bg-purple-900 hover:border-purple-900 hover:text-white outline-purple-600">UI-Figma</button>
         </div>
-        <div class="expertise grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] mt-2">
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/dashboard.png" alt="portfolio" />
-          </div>
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/4get.png" alt="portfolio" />
-          </div>
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/install.png" alt="portfolio" />
-          </div>
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/pizza.png" alt="portfolio" />
-          </div>
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/sass.png" alt="portfolio" />
-          </div>
-          <div class="card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
-            <img class="w-full md:w-80" src="portfolio/rgb-bg.png" alt="portfolio" />
-          </div>
-      </div>
+        <div id="portfolio" class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(200px,1fr))] mt-2">
+          <div class="load-animation rounded-lg h-48">-</div>
+          <div class="load-animation rounded-lg h-48">-</div>
+          <div class="load-animation rounded-lg h-48">-</div>
+        </div>
       </div>
     </section>
+
+    <!-- template for the portfolio projects -->
+     <template id="template">
+      <a href="" data-filter="" data-id="" target="_blank" class="portfolio-link card bg-purple-100 border border-gray-300 rounded-lg overflow-hidden shadow-xl">
+        <img class="card-image w-full h-48 object-cover" src="portfolio/dashboard.png" alt="portfolio" />
+      </a>
+    </template>
+
 
     <!-- form section -->
     <section class="m-4 my-6 lg:mx-28" id="contact">

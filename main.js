@@ -12,10 +12,49 @@ const myForm = document.querySelector("#my-form")
 const animationCycle = document.querySelector(".load-cycle")
 let projectBtns = document.querySelectorAll("#portfolio-btn button")
 let data // this will be assigned value after form submission as a response
+let removeAnimation
+const loadAnimation = document.querySelectorAll(".load-animation")
 
 
 // Toggling humberger menu on and off
 copyRight.innerText = new Date().getFullYear()
+
+// fetching data for the portfolio project
+const template = document.querySelector("#template")
+const container = document.querySelector("#portfolio")
+
+
+async function getTemplate() {
+  const template = document.querySelector("#template");
+  const container = document.querySelector("#portfolio"); // your actual container
+
+  const response = await fetch("https://portfolio-serve-uei3.onrender.com");
+  const json = await response.json();
+  const data = json.data;
+  removeAnimation = json.success
+  if (removeAnimation) {
+    loadAnimation.forEach(item => {
+        item.classList.toggle('hidden')
+    })
+  }
+
+  data.forEach(item => {
+    const clone = template.content.cloneNode(true);
+
+    const portfolioLink = clone.querySelector(".portfolio-link");
+    portfolioLink.href = item.link;
+    portfolioLink.dataset.filter = item.tech;
+    portfolioLink.dataset.id = item._id;
+
+    const cardImage = clone.querySelector(".card-image");
+    cardImage.src = item.file;
+
+    container.appendChild(clone);
+  });
+}
+
+getTemplate();
+
 
 
 // opening & closing humberger menu
