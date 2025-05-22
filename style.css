@@ -7,6 +7,10 @@
     animation: load 1s linear both infinite;
 }
 
+#close-menu {
+    width: 50px;
+}
+
 /* animation for loading effect in form submission */
 @keyframes load {
     from {

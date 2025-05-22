@@ -129,6 +129,15 @@ projectBtns.forEach((btn) => {
     btn.addEventListener('click', e => {
         projectBtns.forEach(b => b.classList.remove("active"))
         btn.classList.add("active")
+        const myFilter = document.querySelectorAll(".portfolio-link")
+        myFilter.forEach((getFilter)=> {
+            if (btn.dataset.filter == getFilter.dataset.filter || btn.dataset.filter == "all") {
+                getFilter.style.display = "grid"
+            } else {
+                getFilter.style.display = "none"
+            }
+        })
+        
     })
 })
 
